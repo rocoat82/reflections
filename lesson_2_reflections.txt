@@ -1,0 +1,13 @@
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+Working directory
+It is only a simple contenitor of files to work on, but it doesn't tracks nothing
+
+Staging Area
+It's the place where files are added and where start to be tracked, but
+until files in these area aren't commited, tey cannot be shared with other project's developers
+
+Repository
+Place where project files are stored with their history and could be shared between different project developers
+
