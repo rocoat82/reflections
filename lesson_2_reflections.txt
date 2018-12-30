@@ -2,12 +2,18 @@ How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
 Working directory
-It is only a simple contenitor of files to work on, but it doesn't tracks nothing
+It's a directory filled by files that are tracked by Git or could be, adding them to the Staging Area 
 
 Staging Area
-It's the place where files are added and where start to be tracked, but
-until files in these area aren't commited, tey cannot be shared with other project's developers
+Place where to add a copy of some files from working directory,
+that logically must be committed on Repository
 
 Repository
-Place where project files are stored with their history and could be shared between different project developers
+Place where project files are stored with their history.
+They could not yet be shared between different project developers
+because are not pushed on the server but are only present locally on your
+branch "master"
 
+How can you use the staging area to make sure you have one commit per logical change?
+
+If you have multiple files changed but you want only to commit a subset of them per logical change, adding only the interesed files to Staging Area and comparing it with the Repository content (git diff --staged), is possible to double-check the changes before the commit, ommitting the other changes reletive to other logical commits
