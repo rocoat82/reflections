@@ -12,13 +12,36 @@ What value do you think it offers?
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+ Using "git add <file>" to add the files into the staging area
+ that logically belong to the same commit
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+ - Every time I want to develop a new feature (eg. create a simplified version of the same branch - 
+   break asteroids into 2 pieces)
+ - Every time I want to do a context switch
+ - Every time I need to create a new "label/branch" for the same commit (es. backup)
+
+ Branches help us to keep organized the project
+
 How do the diagrams help you visualize the branch structure?
+
+ They help to know what are the parental relations between commits (reachability)
+ and what happen when we switch context (eg. detached HEAD)
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+ The result is a new commit that merge the content of the two brances and one of these fall into the other
+ The result is a commit with the two merged branches as parents. The tail is updated and point
+ to the branch that receive the other. 
+
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+ Merging manually requests to compare each line of both files and decide wich must be added
+ or deleted or if there is a conflict, which is the final version.
+ Git can automatically do this but can't resolve conflicts and sometime to resolve these is necessary
+ to know the logic of the parts that must be merged (eg. preserve the same feature of a branch and add
+ the other features from the second - es. break asteroids into 2 parts but add also colored coins)  
